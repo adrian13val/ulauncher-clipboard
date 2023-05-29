@@ -93,7 +93,7 @@ class Clipboard(Extension):
             for entry in matches:
                 result = format_entry(input_text, entry)
                 # Limit to max lines and compensate for the margin
-                lines += max(1, (result.get_name().count('\n') + 1) * 0.85)
+                lines += max(1, (result.name.count('\n') + 1) * 0.85)
                 if max_lines >= lines:
                     yield result
 
